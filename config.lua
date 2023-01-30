@@ -9,25 +9,25 @@ Config.Blip = {
 -- prompt locations
 Config.HotelLocations = {
     { -- valentine
-		name = 'Valentine Hotel', 
-		prompt = 'valhotel', 
-		location = 'valentine', 
-		coords = vector3(-325.7658, 774.46496, 117.45713),
-		showblip = true
-	}, 
+        name = 'Valentine Hotel', 
+        prompt = 'valhotel', 
+        location = 'valentine', 
+        coords = vector3(-325.7658, 774.46496, 117.45713),
+        showblip = true
+    }, 
 }
 
 Config.HotelRoom = {
     { -- valentine
-		name = 'Valentine Hotel Room', 
-		prompt = 'valhotelroom', 
-		location = 'valentine', 
-		coords = vector3(-323.935, 767.02294, 121.6327),
-	}, 
+        name = 'Valentine Hotel Room', 
+        prompt = 'valhotelroom', 
+        location = 'valentine', 
+        coords = vector3(-323.935, 767.02294, 121.6327),
+    }, 
 }
 
 Config.MotelDoors = {
-	238680582,
-	3765902977,
-	3049177115,
+    238680582,
+    3765902977,
+    3049177115,
 }

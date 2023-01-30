@@ -94,26 +94,26 @@ end)
 RegisterNetEvent('rsg-hotel:client:roomteleport')
 AddEventHandler('rsg-hotel:client:roomteleport', function(enterhotel)
     local ped = PlayerPedId()
-	DoScreenFadeOut(500)
-	Wait(1000)
-	if enterhotel == 'valentine' then
-		Citizen.InvokeNative(0x203BEFFDBE12E96A, ped, vector4(-323.935, 767.02294, 121.6327, 102.64147))
-	end
-	Wait(1500)
-	DoScreenFadeIn(1800)
+    DoScreenFadeOut(500)
+    Wait(1000)
+    if enterhotel == 'valentine' then
+        Citizen.InvokeNative(0x203BEFFDBE12E96A, ped, vector4(-323.935, 767.02294, 121.6327, 102.64147))
+    end
+    Wait(1500)
+    DoScreenFadeIn(1800)
 end)
 
 -- leave room
 RegisterNetEvent('rsg-hotel:client:leaveroomteleport')
 AddEventHandler('rsg-hotel:client:leaveroomteleport', function(exithotel)
     local ped = PlayerPedId()
-	DoScreenFadeOut(500)
-	Wait(1000)
-	if exithotel == 'valentine' then
-		Citizen.InvokeNative(0x203BEFFDBE12E96A, ped, vector4(-322.2785, 770.36541, 121.63187, 103.80873))
-	end
-	Wait(1500)
-	DoScreenFadeIn(1800)
+    DoScreenFadeOut(500)
+    Wait(1000)
+    if exithotel == 'valentine' then
+        Citizen.InvokeNative(0x203BEFFDBE12E96A, ped, vector4(-322.2785, 770.36541, 121.63187, 103.80873))
+    end
+    Wait(1500)
+    DoScreenFadeIn(1800)
 end)
 
 --------------------------------------------------------------------------------------------------
@@ -121,7 +121,7 @@ end)
 -- lock motel doors
 Citizen.CreateThread(function()
     for k,v in pairs(Config.MotelDoors) do
-		Citizen.InvokeNative(0xD99229FE93B46286, v, 1,1,0,0,0,0)
+        Citizen.InvokeNative(0xD99229FE93B46286, v, 1,1,0,0,0,0)
         DoorSystemSetDoorState(v, 1) 
     end
 end)
