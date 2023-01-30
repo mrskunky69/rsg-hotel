@@ -118,7 +118,7 @@ end)
 
 --------------------------------------------------------------------------------------------------
 
--- lock motel doors
+-- lock hotel doors
 Citizen.CreateThread(function()
     for k,v in pairs(Config.MotelDoors) do
         Citizen.InvokeNative(0xD99229FE93B46286, v, 1,1,0,0,0,0)
@@ -134,5 +134,3 @@ end)
     3 = DOORSTATE_HOLD_OPEN_POSITIVE,
     4 = DOORSTATE_HOLD_OPEN_NEGATIVE
 --]]
-
--- val inside room : vector4(-323.7338, 767.19439, 121.63269, 110.0977)
