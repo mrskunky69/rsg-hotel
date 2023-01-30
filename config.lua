@@ -26,7 +26,7 @@ Config.HotelRoom = {
     }, 
 }
 
-Config.MotelDoors = {
+Config.HotelDoors = {
     238680582,
     3765902977,
     3049177115,

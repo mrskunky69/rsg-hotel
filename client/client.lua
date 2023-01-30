@@ -120,7 +120,7 @@ end)
 
 -- lock hotel doors
 Citizen.CreateThread(function()
-    for k,v in pairs(Config.MotelDoors) do
+    for k,v in pairs(Config.HotelDoors) do
         Citizen.InvokeNative(0xD99229FE93B46286, v, 1,1,0,0,0,0)
         DoorSystemSetDoorState(v, 1) 
     end
