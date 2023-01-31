@@ -5,15 +5,18 @@ RegisterNetEvent('rsg-hotel:server:EnterRoom', function(data)
     local enterhotel = data.enterhotel
     local src = source
     local bucket = math.random(1,9999999999)
-    RSGCore.Functions.SetPlayerBucket(src, tonumber(bucket))
+    SetPlayerRoutingBucket(src, tonumber(bucket))
+	local currentbucket = GetPlayerRoutingBucket(src)
+	print(currentbucket)
     TriggerClientEvent('rsg-hotel:client:roomteleport', src, enterhotel)
-    --RSGCore.Functions.SetPlayerBucket(src, 0)
 end)
 
 RegisterNetEvent('rsg-hotel:server:LeaveRoom', function(data)
     print(data.exithotel)
     local exithotel = data.exithotel
     local src = source
-    RSGCore.Functions.SetPlayerBucket(src, 0)
+    SetPlayerRoutingBucket(src, 0)
+	local currentbucket = GetPlayerRoutingBucket(src)
+	print(currentbucket)
     TriggerClientEvent('rsg-hotel:client:leaveroomteleport', src, exithotel)
 end)
